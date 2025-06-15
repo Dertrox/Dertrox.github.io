@@ -1,17 +1,13 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>José Restrepo | Ingeniería Electrónica</title>
-  <!-- SEO & Open Graph -->
   <meta name="description" content="Portafolio de José Restrepo, Ingeniero Electrónico. Proyectos en sistemas embebidos, automatización y hardware/software.">
   <meta property="og:title" content="José Restrepo – Portafolio">
   <meta property="og:description" content="Proyectos y experiencia en electrónica, embebidos y automatización.">
-  <meta property="og:image" content="assets/preview.png">
   <link rel="icon" href="assets/favicon.ico">
-  <!-- Fonts & AOS -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=JetBrains+Mono&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
@@ -19,7 +15,7 @@
 <body>
   <header class="hero">
     <nav class="navbar">
-      <a class="brand" href="#">José&nbsp;Restrepo</a>
+      <a class="brand" href="#">José Restrepo</a>
       <button class="toggle-btn" aria-label="toggle menu">☰</button>
       <ul class="nav-links">
         <li><a href="#sobre-mi">Sobre mí</a></li>
@@ -37,58 +33,30 @@
   </header>
 
   <main>
-    <section id="sobre-mi" class="section" data-aos="fade-right">
-      <h2>Sobre mí</h2>
-      <p>Ingeniero Electrónico apasionado por diseñar e implementar sistemas embebidos, automatización industrial y soluciones hardware-software.</p>
-    </section>
-
-    <section id="educacion" class="section" data-aos="fade-left">
-      <h2>Educación</h2>
-      <ul>
-        <li>Unidad Central del Valle (UCEVA) – Ingeniería Electrónica (Finaliza 2025)</li>
-        <li>SENA – Energía Fotovoltaica para red doméstica</li>
-        <li>Certificación de Inglés</li>
-      </ul>
-    </section>
-
-    <section id="experiencia" class="section" data-aos="fade-right">
-      <h2>Experiencia</h2>
-      <p><strong>MyRobotech SAS</strong> – Ingeniero de Proyectos (Jun 2025–Dic 2025)</p>
-    </section>
+    <!-- ... otras secciones ... -->
 
     <section id="proyectos" class="section" data-aos="fade-left">
       <h2>Proyectos destacados</h2>
       <div class="cards">
         <div class="card" data-aos="zoom-in">
+          <img src="assets/projects/telemetria-cohetes.jpg" alt="Telemetría Cohetes" />
           <h3>🛰️ Telemetría en Cohetes</h3>
-          <p>Altitud, velocidad, G‑force, temperatura y expulsión automática de paracaídas.</p>
+          <p>Implementé un sistema de telemetría para cohetes experimentales, midiendo altitud, velocidad, temperatura, presión y G‑force. Automatización de la expulsión del paracaídas basada en umbrales.</p>
+          <a href="https://github.com/Dertrox/telemetria-cohetes" target="_blank">Ver código en GitHub</a>
         </div>
         <div class="card" data-aos="zoom-in" data-aos-delay="100">
+          <img src="assets/projects/monitor-apicultura.jpg" alt="Monitor Apicultura" />
           <h3>🐝 Monitor Apícola</h3>
-          <p>PCB en KiCad, BME680, microSD y análisis en Java.</p>
+          <p>Diseñé la placa en KiCad, fabriqué vía JLCPCB y recolecté datos ambientales con BME680. Los datos se almacenan en microSD y se visualizan con una aplicación Java para evaluar la salud de las colmenas.</p>
+          <a href="https://github.com/Dertrox/monitor-apicultura" target="_blank">Ver código en GitHub</a>
         </div>
       </div>
     </section>
 
-    <section id="habilidades" class="section" data-aos="fade-up">
-      <h2>Habilidades</h2>
-      <div class="skill-grid">
-        <div><strong>Lenguajes</strong><p>Python, C/C++, C#, MicroPython</p></div>
-        <div><strong>Herramientas</strong><p>Arduino, ESP32, KiCad, Proteus, MATLAB</p></div>
-        <div><strong>Extras</strong><p>Git, Linux, PCB Design, Netlify</p></div>
-      </div>
-    </section>
-
-    <section id="contacto" class="section" data-aos="fade-up">
-      <h2>Contacto</h2>
-      <p>✉️ <a href="mailto:restrejose@gmail.com">restrejose@gmail.com</a></p>
-      <p>🔗 <a href="https://www.linkedin.com/in/jose-g-restrepo-400243339/" target="_blank">LinkedIn</a></p>
-      <p>💻 <a href="https://github.com/Dertrox" target="_blank">GitHub</a></p>
-    </section>
+    <!-- ... resto de secciones ... -->
   </main>
 
   <button id="dark-toggle" title="Toggle dark mode">🌙</button>
-
   <footer>
     <p>© 2025 José Restrepo</p>
   </footer>
