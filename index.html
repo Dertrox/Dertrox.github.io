@@ -1,36 +1,49 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio - Dertrox</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portafolio - Dertrox</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
 </head>
 <body>
-    <header>
-        <h1>Dertrox</h1>
-        <p>Estudiante de Ingeniería Electrónica</p>
-    </header>
+  <header>
+    <h1>Dertrox</h1>
+    <p>Estudiante de Ingeniería Electrónica</p>
+    <nav>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
 
-    <section class="sobre-mi">
-        <h2>Sobre mí</h2>
-        <p>Soy estudiante de Ingeniería Electrónica con interés en sistemas embebidos, automatización, y desarrollo de hardware y software.</p>
-    </section>
+  <section class="sobre-mi" id="sobre-mi">
+    <h2>Sobre mí</h2>
+    <p>Soy estudiante de Ingeniería Electrónica con pasión por los sistemas embebidos, automatización, y el desarrollo de soluciones que integren hardware y software. Me encanta experimentar con microcontroladores, diseño de PCBs y programación en C/C++ y Python.</p>
+  </section>
 
-    <section class="proyectos">
-        <h2>Proyectos</h2>
-        <ul>
-            <li>
-                <strong>Proyecto 1:</strong> Medidor de temperatura con Arduino y LCD.
-            </li>
-            <li>
-                <strong>Proyecto 2:</strong> Control de motor paso a paso con ESP32.
-            </li>
-        </ul>
-    </section>
+  <section class="proyectos" id="proyectos">
+    <h2>Proyectos destacados</h2>
+    <div class="proyecto">
+      <h3>🔧 Medidor de temperatura con Arduino</h3>
+      <p>Diseñado con sensor LM35 y pantalla LCD 16x2. Programado en C++ para mostrar temperatura ambiente.</p>
+      <a href="https://github.com/dertrox/medidor-temperatura" target="_blank">Ver código</a>
+    </div>
+    <div class="proyecto">
+      <h3>⚙️ Control de motor paso a paso con ESP32</h3>
+      <p>Utiliza un driver A4988 y ESP32 para control preciso vía Bluetooth. Aplicación móvil desarrollada en MIT App Inventor.</p>
+      <a href="https://github.com/dertrox/control-motor" target="_blank">Ver código</a>
+    </div>
+  </section>
 
-    <footer>
-        <p>Contacto: dertrox@email.com</p>
-    </footer>
+  <section class="contacto" id="contacto">
+    <h2>Contacto</h2>
+    <p>📧 <a href="mailto:dertrox@email.com">dertrox@email.com</a></p>
+  </section>
+
+  <footer>
+    <p>© 2025 Dertrox | Portafolio personal</p>
+  </footer>
 </body>
 </html>
