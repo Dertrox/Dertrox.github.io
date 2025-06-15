@@ -101,4 +101,19 @@ footer {
 /* Animaciones suaves */
 .section, .proyecto {
   transition: all 0.3s ease-in-out;
+  body.manual-dark {
+  background-color: #111 !important;
+  color: #e0e0e0 !important;
+}
+
+body.manual-dark .main-header,
+body.manual-dark footer {
+  background-color: #111 !important;
+  color: #ccc !important;
+}
+
+body.manual-dark .proyecto {
+  background-color: #1c1c1c !important;
+  border-color: #333 !important;
+}
 }
