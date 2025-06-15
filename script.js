@@ -1,37 +1,28 @@
 // script.js
+// Inicia AOS
+AOS.init({ once: true, duration: 800 });
 
-// Animación al hacer scroll
-const sections = document.querySelectorAll('.section');
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-    }
-  });
-}, { threshold: 0.2 });
+// Typing effect en hero
+const words = ['Automatización', 'Embebidos', 'Hardware‑Software'];
+let idx = 0, pos = 0, forward = true;
+const typer = () => {
+  const element = document.querySelector('.typing');
+  element.textContent = words[idx].slice(0, pos);
+  if (forward) pos++ ; else pos--;
+  if (pos === words[idx].length || pos === 0) {
+    forward = !forward;
+    if (!forward) idx = (idx + 1) % words.length;
+  }
+  setTimeout(typer, forward ? 150 : 100);
+};
+typer();
 
-sections.forEach(section => {
-  section.classList.add('hidden');
-  observer.observe(section);
-});
+// Toggle menú móvil
+document.querySelector('.toggle-btn').onclick = () => {
+  document.querySelector('.nav-links').classList.toggle('open');
+};
 
-// Toggle manual modo oscuro
-const toggleBtn = document.createElement('button');
-toggleBtn.textContent = '🌙 Modo Oscuro';
-toggleBtn.style.position = 'fixed';
-toggleBtn.style.bottom = '1rem';
-toggleBtn.style.right = '1rem';
-toggleBtn.style.padding = '0.5rem 1rem';
-toggleBtn.style.border = 'none';
-toggleBtn.style.borderRadius = '5px';
-toggleBtn.style.cursor = 'pointer';
-toggleBtn.style.zIndex = '1000';
-toggleBtn.style.backgroundColor = '#000';
-toggleBtn.style.color = '#fff';
-document.body.appendChild(toggleBtn);
-
-let darkMode = false;
-toggleBtn.addEventListener('click', () => {
-  darkMode = !darkMode;
-  document.body.classList.toggle('manual-dark', darkMode);
-});
+// Toggle modo oscuro
+document.getElementById('dark-toggle').onclick = () => {
+  document.body.classList.toggle('dark');
+};
