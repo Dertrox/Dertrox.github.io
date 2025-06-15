@@ -1,77 +1,99 @@
-/* style.css */
-/* Base & layout */
-:root {
-  --bg-light: #fff;
-  --bg-dark: #111;
-  --text-light: #000;
-  --text-dark: #e0e0e0;
-  --accent: #00d8ff;
-}
-* { box-sizing: border-box; margin:0; padding:0; }
-body {
-  font-family: 'Inter', sans-serif;
-  background: var(--bg-light);
-  color: var(--text-light);
-  scroll-behavior: smooth;
-  transition: background .3s, color .3s;
-}
-a { color: var(--accent); text-decoration: none; }
-h1,h2,h3 { font-weight:600; }
-.section { max-width:900px; margin:4rem auto; padding:0 1rem; }
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>José Restrepo | Ingeniería Electrónica</title>
+  <!-- SEO & Open Graph -->
+  <meta name="description" content="Portafolio de José Restrepo, Ingeniero Electrónico. Proyectos en sistemas embebidos, automatización y hardware/software.">
+  <meta property="og:title" content="José Restrepo – Portafolio">
+  <meta property="og:description" content="Proyectos y experiencia en electrónica, embebidos y automatización.">
+  <meta property="og:image" content="assets/preview.png">
+  <link rel="icon" href="assets/favicon.ico">
+  <!-- Fonts & AOS -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=JetBrains+Mono&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <nav class="navbar">
+      <a class="brand" href="#">José&nbsp;Restrepo</a>
+      <button class="toggle-btn" aria-label="toggle menu">☰</button>
+      <ul class="nav-links">
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#educacion">Educación</a></li>
+        <li><a href="#experiencia">Experiencia</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+    <div class="hero-content" data-aos="fade-up">
+      <h1>Soy <span class="typing"></span></h1>
+      <p>Ingeniero Electrónico • Sistemas Embebidos • Automatización</p>
+    </div>
+  </header>
 
-/* Hero & Navbar */
-.hero {
-  background: var(--bg-light) url('assets/hero-bg.jpg') center/cover no-repeat;
-  height: 80vh; display:flex; flex-direction:column; justify-content:center; align-items:center;
-  position: relative; overflow:hidden;
-}
-.navbar {
-  width:100%; display:flex; justify-content:space-between; align-items:center;
-  padding:1rem 2rem; position:sticky; top:0; background:rgba(255,255,255,.8);
-  backdrop-filter: blur(8px); z-index:10;
-}
-.brand { font-family:'JetBrains Mono'; font-size:1.5rem; color:var(--text-light); }
-.nav-links { display:flex; gap:1.5rem; }
-.toggle-btn { display:none; background:none; border:none; font-size:1.5rem; cursor:pointer; }
+  <main>
+    <section id="sobre-mi" class="section" data-aos="fade-right">
+      <h2>Sobre mí</h2>
+      <p>Ingeniero Electrónico apasionado por diseñar e implementar sistemas embebidos, automatización industrial y soluciones hardware-software.</p>
+    </section>
 
-/* Mobile */
-@media(max-width:768px) {
-  .nav-links { position:fixed; top:0; right:-100%; height:100vh; flex-direction:column;
-    background:var(--bg-light); padding-top:4rem; transition:right .3s; }
-  .nav-links.open { right:0; }
-  .toggle-btn { display:block; }
-}
+    <section id="educacion" class="section" data-aos="fade-left">
+      <h2>Educación</h2>
+      <ul>
+        <li>Unidad Central del Valle (UCEVA) – Ingeniería Electrónica (Finaliza 2025)</li>
+        <li>SENA – Energía Fotovoltaica para red doméstica</li>
+        <li>Certificación de Inglés</li>
+      </ul>
+    </section>
 
-/* Cards */
-.cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:1.5rem; }
-.card {
-  background:var(--bg-light); border:2px solid var(--accent); border-radius:8px;
-  padding:1.5rem; text-align:center; transition: transform .3s, box-shadow .3s;
-}
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow:0 8px 20px rgba(0,0,0,.1);
-}
+    <section id="experiencia" class="section" data-aos="fade-right">
+      <h2>Experiencia</h2>
+      <p><strong>MyRobotech SAS</strong> – Ingeniero de Proyectos (Jun 2025–Dic 2025)</p>
+    </section>
 
-/* Skill grid */
-.skill-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:1rem; }
-.skill-grid div p { margin-top:.5rem; font-size:.95rem; }
+    <section id="proyectos" class="section" data-aos="fade-left">
+      <h2>Proyectos destacados</h2>
+      <div class="cards">
+        <div class="card" data-aos="zoom-in">
+          <h3>🛰️ Telemetría en Cohetes</h3>
+          <p>Altitud, velocidad, G‑force, temperatura y expulsión automática de paracaídas.</p>
+        </div>
+        <div class="card" data-aos="zoom-in" data-aos-delay="100">
+          <h3>🐝 Monitor Apícola</h3>
+          <p>PCB en KiCad, BME680, microSD y análisis en Java.</p>
+        </div>
+      </div>
+    </section>
 
-/* Dark mode manual */
-body.dark {
-  background: var(--bg-dark);
-  color: var(--text-dark);
-}
-body.dark .navbar { background: rgba(17,17,17,.8); }
-body.dark .card { background: #1c1c1c; border-color: var(--accent); }
-body.dark .hero { background-blend-mode: multiply; }
+    <section id="habilidades" class="section" data-aos="fade-up">
+      <h2>Habilidades</h2>
+      <div class="skill-grid">
+        <div><strong>Lenguajes</strong><p>Python, C/C++, C#, MicroPython</p></div>
+        <div><strong>Herramientas</strong><p>Arduino, ESP32, KiCad, Proteus, MATLAB</p></div>
+        <div><strong>Extras</strong><p>Git, Linux, PCB Design, Netlify</p></div>
+      </div>
+    </section>
 
-/* Dark-toggle button */
-#dark-toggle {
-  position:fixed; bottom:1rem; right:1rem; padding:.5rem; border:none; border-radius:5px;
-  background:var(--accent); color:#fff; cursor:pointer; font-size:1.2rem; z-index:1000;
-}
+    <section id="contacto" class="section" data-aos="fade-up">
+      <h2>Contacto</h2>
+      <p>✉️ <a href="mailto:restrejose@gmail.com">restrejose@gmail.com</a></p>
+      <p>🔗 <a href="https://www.linkedin.com/in/jose-g-restrepo-400243339/" target="_blank">LinkedIn</a></p>
+      <p>💻 <a href="https://github.com/Dertrox" target="_blank">GitHub</a></p>
+    </section>
+  </main>
 
-/* AOS overrides */
-[data-aos][data-aos][data-aos-delay] { opacity: 0; transform: translateY(20px); }
-[data-aos].aos-animate { opacity: 1; transform: translateY(0); transition: all .6s ease-out; }
+  <button id="dark-toggle" title="Toggle dark mode">🌙</button>
+
+  <footer>
+    <p>© 2025 José Restrepo</p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
